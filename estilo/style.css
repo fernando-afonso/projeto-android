@@ -1,0 +1,207 @@
+@charset "UTF-8";/*Para que o site entenda acentuações e pontuações*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');/*url copiada e colada direto do "google fonts" na area de "import"*/
+
+@font-face { /*Para adicionar uma fonte externa, baixada para a pasta do projeto*/
+    font-family: 'Android'; /*Dar uma nome para a familia da fonte baixada*/
+    src: url('../fontes/idroid.otf') format('opentype'); /*url de caminho de onde a fonte está em suas pastas do projeto*/
+    font-weight: normal; /*Espessura da fonte*/
+}
+
+:root { /*Pseudo-classe para o documento inteiro (--nomeVar:)*/
+    --cor0: #c5ebd6; /*Variável para cor geral utilizada no projeto*/
+    --cor1: #83e1ad; /*Variável para cor geral utilizada no projeto*/
+    --cor2: #3ddc84; /*Variável para cor geral utilizada no projeto*/
+    --cor3: #2fa866; /*Variável para cor geral utilizada no projeto*/
+    --cor4: #1a5c37; /*Variável para cor geral utilizada no projeto*/
+    --cor5: #063d1e; /*Variável para cor geral utilizada no projeto*/
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif; /*Variável para fonte padrão utilizada no projeto*/
+    --fonte-destaque: 'Bebas Neue', 'cursive'; /*Variável para fonte destaque utilizada no projeto*/
+    --fonte-android: 'Android', 'cursive'; /*Variável para fonte Android utilizada no projeto*/
+}
+
+* {/*Seletor para configurações globais do documento*/
+    margin: 0px; /*Zerar as margens de todos os outros elementos*/
+    padding: 0px;  /*Zerar o preenchimento de contorno de todos os outros elementos*/
+}
+
+body { /*Corpo geral do site*/
+    background-color: var(--cor0); /*Cor de fundo utilizando a varia´vel criada em ":root"*/
+    font-family: var(--fonte-padrao); /*Adicionando uma das fontes criadas em "root" como uma variável*/
+}
+
+a.externo::after { /*Todos os links da classe "externo", adicionar em seguida "::after"*/
+    content: '\00A0\1F517'; /*"\00A0"é o espaço dado antes de inserir o emoji de link*/
+}
+
+header { /*Cabeçalho*/
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /*Fazendo um gradiente na cor de fundo do bloco em "header" utilizando as cores com variáveis*/
+    min-height: 150px; /*Adicionando uma altura mínima no bloco do "header"*/
+    text-align: center; /*Centralizando textos em "header"*/
+    padding-top: 40px; /*Criando um espaçamento de 40px na parte superior do bloco em "header"*/
+}
+
+header > h1 { /*CSS apenas no(s) h1 do Cabeçalho (header)*/
+    color: white; /*Cor da fonte*/
+    font-family: var(--fonte-destaque); /*Adicionando uma das fontes criadas em ":root" como uma variável*/
+    font-size: 3em; /*Aumentando o tamnho da fonte em 3 vezes do padrão*/
+    font-weight: normal; /*Para que a espessura da fonte fique normal (Nem grossa, nem fina)*/
+    margin-bottom: 20px; /*Criando uma espaçamento de 20px na parte inferior de "h1" dentro de "header"*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267); /*Adicionando sombra no texto de "h1" dentro de "header"*/
+}
+
+header > p { /*Paragrafos dentro de "header"*/
+    font-family: var(--fonte-padrao); /*Adicionando uma das fontes criadas em "root" como uma variável*/
+    font-size: 1.2em; /*Aumentando o tamnho da fonte em 1.2 vezes do padrão*/
+    color: white; /*Cor da fonte*/
+    max-width: 500px; /*Adicionando a largura de 500px para que fique com a mesma largura que o "h1" denteo de "header"*/
+    padding-right: 10px; /*Para que sempre exista em margem de 10px á direta do "p" dentro de "header"*/
+    padding-left: 10px; /*Para que sempre exista em margem de 10px á esquerda do "p" dentro de "header"*/
+    margin: auto; /*Para que a margem sempre se encotre centralizada em diversos tamanhos de telas*/
+    margin-bottom: 30px; /*Para dar um espaço de 30px na parte iferio do "p" de "header"*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315); /*Adicionando sombra no texto de "p" dentro de "header"*/
+    
+}
+
+nav { /*navegação (Menu)*/
+    background-color: var(--cor5); /*Cor de fundo utilizando a variável criada em ":root"*/
+    padding: 10px; /*Espaçamento de 10px em todas as direções em "nav"*/
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192); /*Sombras no box em "nav"*/
+}
+
+nav > a { /*Links da navegação (Menu)*/
+    color:var(--cor1); /*Cor da fonte nos links*/
+    padding: 10px; /*Espaçamento de 10px entre os links*/
+    border-radius: 5px; /*Faz um raio de 5px nos cantos de fundo de cada link*/
+    text-decoration: none; /*Tirar o sublinhado dos links*/
+    font-weight: bold; /*Aumentando a espessura da fonte*/
+    transition-duration: 0.5s; /*Adiciona um tempo de delay de 0.5 segundos de transição ao passar o mouse por cima*/
+}
+
+nav > a:hover { /*Pseudo-classe nos links, dentro de "Nav" (Para efeitos ao passar o mouse sobre)*/
+    background-color: var(--cor3); /*Ao passar o mouse em cima, inverte para esta cor de fundo*/
+    color: var(--cor5);  /*Ao passar o mouse em cima, inverte para esta cor de fonte*/
+
+}
+
+main { /*Conteúdo principal*/
+    min-width: 300px; /*Largura mínima em "main"*/
+    max-width: 1000px; /*Largura máxima em "main"*/
+    margin: auto;  /*Para que ao ultrapassar o "max-width", o "main" fique centralizado na tela*/
+    margin-bottom: 30px; /*Criando um espaçamento de 30px entre o fim do meu "main" e o começo do proximo conteúdo*/
+    padding: 20px; /*Criando um espaçamento de 20px em todas as direções entre conteúdos de "main"*/
+    background-color: white; /*Cor de fundo*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418); /*Criando sombras em "main"*/
+    border-bottom-left-radius: 10px; /*Criando bordar em "main" apenas na parte inferior esquerda*/
+    border-bottom-right-radius: 10px; /*Criando bordar em "main" apenas na parte inferior direita*/
+}
+
+main h1 { /*CSS apenas no(s) h1 do conteúdo principal "main"*/
+    color: var(--cor5); /*Cor da fonte utilizando a variável criada em ":root"*/
+    font-family: var(--fonte-android); /*Adicionando uma das fontes criadas em ":root" como uma variável*/
+    font-weight: normal; /*Para que a espessura da fonte fique normal (Nem grossa, nem fina)*/
+    font-size: 1.8em; /*Tamanho da fonte em "h1" dentro de "main"*/
+}
+
+main h2 { /*CSS apenas no(s) h2 do conteúdo principal "main"*/
+    font-family: var(--fonte-android); /*Adicionando uma das fontes criadas em ":root" como uma variável*/
+    color: var(--cor4);  /*Cor da fonte utilizando a variável criada em ":root"*/
+    font-size: 1.3em; /*Tamanho da fonte em "h2" dentro de "main"*/
+    font-weight: normal; /*Para que a espessura da fonte fique normal (Nem grossa, nem fina)*/
+    background-image: linear-gradient(to right, var(--cor1), transparent); /*Adicionando uma cor de fundo gradiente da direita para a esquerda*/
+    text-indent: 8px; /*Adicionando um espaçamento inicial de texto de 8px em "h2" dentro de "main"*/
+}
+
+main img { /*CSS apenas em img do conteúdo princpipal "main"*/
+    width: 100%; /*Largura da foto em "main" se adptará sempre para ter 100%*/
+}
+
+main img.pequena { /*CSS apenas em img com a classe "pequena" adicionada no HTML do conteúdo princpipal "main"*/
+    max-width: 350px;/*Adicionando um tamanho máximo de largura (considerando que a foto tem 400px de largura total)*/
+    display: block; /*Por uma imagens não ser um bloco, adc isso para que possamos centraliza-la com "margin: auto"*/
+    margin: auto; /*Para centralizar a imagem no dispositivo*/
+}
+
+main p {/*Parágrafos dentro de "main"*/
+    margin: 15px 0px 15px 0px; /*Adicionando margens ao nossos paragrafos*/
+    text-align: justify; /*Para fazer o alinhamentos de textos de "p" dentro de "main"*/
+    text-indent: 30px; /*Para fazer o recúo de 30px em todo inicio de parágrafos*/
+    font-size: 1em; /*Tamanho da fonte em parágrafos dentro de "main"*/
+    line-height: 2em; /*Espaçamentos entre as linhas dos parágrafos dentro de "main"*/
+}
+
+main strong { /*destacados em negrito detro de "main"*/
+    color: var(--cor4);  /*Cor da fonte utilizando a variável criada em ":root"*/
+    font-weight: bold; /*Aumentando a espessura da fonte*/
+}
+
+main a { /*Links dentro do "main"*/
+    text-decoration: none; /*Tirar o sublinhado dos links*/
+    font-weight: bold; /*Aumentando a espessura da fonte*/
+    color: var(--cor5);  /*Cor da fonte utilizando a variável criada em ":root"*/
+    background-color: var(--cor1); /*Cor de fundo utilizando a variável criada em ":root"*/
+    padding: 2px 6px; /*Espaçamentos de altura e largura dentro da box de texto dos links*/
+}
+
+main a:hover { /*Pseudo-classe nos links, dentro de "main" (Para efeitos ao passar o mouse sobre)*/
+    text-decoration: underline; /*Adicionar sublinhados ao passar o mouse*/
+    color: var(--cor4); /*Mudando para essa cor de fonte ao passar o mouse*/
+}
+
+div.video { /*classe video dentro de uma "div"*/
+    background-color: var(--cor5); /*Cor de fundo utilizando a variável criada em ":root"*/
+    margin: 0px -20px 30px -20px; /*Tirando a diferença de margens dentro do bloco "div.video"*/
+    padding: 20px; /*Espaçamento de 20px em todas as direções em "div.video"*/
+    padding-bottom: 59%; /*Configurando o tamanho do video, de acordo com a box dele*/
+    position: relative;
+}
+
+div.video > iframe { /*Iframe vindo por meio do compartilhar do "YouTube"*/
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside { /*Conteúdo secundário do site*/
+    background-color: var(--cor1); /*Cor de fundo utilizando a variável criada em ":root"*/
+    padding: 10px; /*Espaçamento de 10px em todas as direções na box de "aside"*/
+    border-radius: 10px; /*Borda arredondada de 10px na box de "aside"*/
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281); /*Adicionando sombra no box de "aside"*/
+}
+
+aside > h3 { /*Título "h3" dentro de "aside"*/
+    background-color: var(--cor4); /*Cor de fundo utilizando a variável criada em ":root"*/
+    color: white;  /*Cor da fonte utilizando a variável criada em ":root"*/
+    padding: 10px; /*Fazendo uma espalamentos de 10px em todas as direções*/
+    margin: -10px -10px 0px -10px; /*Aumentando a margem em 10px de "h3" dentro de "aside"*/
+    border-radius: 10px 10px 0px 0px; /*Colocando borda de 10px apenas na parte superios da box de "h3" dentro de "aside"*/
+}
+
+aside > ul { /*Listas dentro de "aside" (Conteúdo secundário do site)*/
+    list-style-type: '\2714\00A0\00A0'; /*Adicionando o "check" ao inicio da lista, onde o primeiro número é o código do "emoji check" e os outros são de espaçamento do emoji com os numeros da lista*/
+    list-style-position: inside; /*Para organizar os icones da lista dentro da box de "aside"*/
+    columns: 2; /*Para que a lista quebre em 2 colunas*/
+    
+}
+
+footer { /*Roda-pé*/
+    background-color: var(--cor5); /*Cor de fundo utilizando a variável criada em ":root"*/
+    color: white; /*Cor da fonte*/
+    text-align: center; /*Centralizando os textos dentro de "footer"*/
+    font-size: 0.8em; /*Diminuindo o tamanho da fonte dentro de "footer"*/
+    padding: 5px; /*Fazendo uma espalamentos de 5px em todas as direções*/
+    }
+
+footer a { /*Links dentro do "Roda-pé"*/
+    color: white; /*Cor de fundo*/
+    font-weight: bolder; /*Aumentando a espessura da fonte*/
+    text-decoration: none; /*Tirar o sublinhado dos links*/
+}
+
+footer a:hover { /*Pseudo-classe nos links, dentro de "footer" (Para efeitos ao passar o mouse sobre)*/
+    text-decoration: underline; /*Adicionar sublinhados ao passar o mouse*/
+    color: var(--cor1); /*Mudando para essa cor de fonte ao passar o mouse*/
+}
