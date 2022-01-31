@@ -59,7 +59,7 @@ header > p { /*Paragrafos dentro de "header"*/
     padding-right: 10px; /*Para que sempre exista em margem de 10px á direta do "p" dentro de "header"*/
     padding-left: 10px; /*Para que sempre exista em margem de 10px á esquerda do "p" dentro de "header"*/
     margin: auto; /*Para que a margem sempre se encotre centralizada em diversos tamanhos de telas*/
-    margin-bottom: 30px; /*Para dar um espaço de 30px na parte iferio do "p" de "header"*/
+    padding-bottom: 50px; /*Para dar um espaço de 50px na parte iferio do "p" de "header"*/
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315); /*Adicionando sombra no texto de "p" dentro de "header"*/
     
 }
